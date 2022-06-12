@@ -1,0 +1,40 @@
+Date 12-06-2022
+Client 
+IP-- 202.100.10.2 -- 202.100.10.3 --: 45000, 8080  SYN
+
+LB-- Selected Srver 192.168.0.3
+
+IP-- 192.168.0.2 -- 192.168.0.3 --: 35678, 8080 SYN  -- TCP Connection Creation
+Mapping --: 202.100.10.2 (45000) -- 192.168.0.2 (35678) --- (NAT scale -- IP pool based nating, Hybrid IP+Port)
+
+Server --:
+
+
+5 Tupple (SRC_IP, DEST_IP, SRC_PORT, DEST_PORT, Protocol) ---: 4 parameters Uniquely identify a connection 
+
+
+Home -- Wifi_ROuter -- SP _Edge ---- WAN --- SP_Edge ---DataCenter
+     S-NAT                      S-NAT                  
+	-------------------------------------------------------
+	
+	FTP (Control, Data)  
+	
+	L7 
+	
+	Beteen LB Node -- Gossip, TCP Keepalive, Capacity, Link Down , Node Restarted,
+	
+	Scalability Design 
+	Cluster
+	Active Backup --- First support active backup
+	
+	Active Active ---
+	
+User space , Kernel space (Puneet, Ajay Pratap singh) Raw Socket 
+
+Muliple Users with same public IP  (Port Number )
+
+Language (GO) 
+
+NAT Design (Discuss with Nagendra)
+
+	
